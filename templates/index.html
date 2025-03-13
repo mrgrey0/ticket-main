@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Ticket</title>
+</head>
+<body>
+    <h1>Claim Your Ticket</h1>
+    <form action="/" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Claim</button>
+    </form>
+    {% if ticket_id %}
+        <p>Your ticket ID: {{ ticket_id }}</p>
+    {% endif %}
+    {% if warning %}
+        <p style="color: red;">{{ warning }}</p>
+    {% endif %}
+</body>
+</html>
